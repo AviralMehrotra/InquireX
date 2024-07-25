@@ -40,7 +40,7 @@ InquireX is a robust ASP.NET MVC application designed for efficient management o
 1. Clone the Repository
   
     ```sh
-    git clone https://github.com/yourusername/InquireX.git
+    git clone https://github.com/AvirarlMehrotra/InquireX.git
     cd InquireX
     ```
 
@@ -102,11 +102,11 @@ Option 2: Using SQL Scripts
 
 Contributions are welcome! Please fork this repository and submit pull requests.
 
-    - Fork the Project
-    - Create your Feature Branch (git checkout -b feature/YourFeature)
-    - Commit your Changes (git commit -m 'Add some YourFeature')
-    - Push to the Branch (git push origin feature/YourFeature)
-    - Open a Pull Request
+   - Fork the Project
+   - Create your Feature Branch (git checkout -b feature/YourFeature)
+   - Commit your Changes (git commit -m 'Add some YourFeature')
+   - Push to the Branch (git push origin feature/YourFeature)
+   - Open a Pull Request
 
 ## License
 
