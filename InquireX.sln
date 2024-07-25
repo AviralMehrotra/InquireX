@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.34930.48
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD_Operations", "CRUD_Operations\CRUD_Operations.csproj", "{C0964F1E-B6AD-42F3-B2C2-433DC79E5F62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InquireX", "CRUD_Operations\InquireX.csproj", "{C0964F1E-B6AD-42F3-B2C2-433DC79E5F62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
