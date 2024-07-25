@@ -1,0 +1,32 @@
+﻿@model IEnumerable<CRUD_Operations.Models.ProjectsModel>
+
+@{
+    ViewBag.Title = "Project Display";
+}
+
+<h2>Projects</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Project Name</th>
+            <th>Client Name</th>
+            <th>Client Email</th>
+            <th>Date Added</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var project in Model)
+        {
+            <tr>
+                <td>@project.ProjectName</td>
+                <td>@project.ClientName</td>
+                <td>@project.ClientEmail</td>
+                <td>@project.DateAdded</td>
+            </tr>
+        }
+    </tbody>
+</table>

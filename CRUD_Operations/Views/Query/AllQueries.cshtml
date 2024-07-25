@@ -1,0 +1,78 @@
+﻿@model IEnumerable<CRUD_Operations.Models.QueryModel>
+
+@{
+    ViewBag.Title = "AllQueries";
+}
+
+<h2>AllQueries</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Priority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileUpload)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QueryRaiseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedTo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Priority)
+        </td>
+        <td>
+            <a href="~/Screenshots/@item.FileUpload" target="_blank" rel="noreferrer noopener" class="btn btn-primary">View</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QueryRaiseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignedTo)
+        </td>
+
+        @if ((string)Session["UserRole"] == "admin" || (string)Session["UserRole"] == "hr")
+        {<td>
+                @Html.ActionLink("AddressQuery", "AddressQuery", new { TicketNumber = item.TicketNumber }, new { @class = "btn btn-sm btn-warning" })
+        </td>}
+    </tr>
+}
+
+</table>

@@ -1,0 +1,27 @@
+﻿@model CRUD_Operations.Models.QueryModel
+
+@{
+    ViewBag.Title = "CreateQuery";
+}
+<h2>Create Query</h2>
+    <form action="/Query/CreateQuery" method="post"  enctype="multipart/form-data">
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProjectName, "Project")
+            @Html.DropDownListFor(m => m.ProjectName, new SelectList(ViewBag.Projects), "Select Project", new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Subject)
+            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Message)
+            @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ScreenshotPath, "Screenshot (optional)")
+            <input type="file" name="screenshotFile" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Create Query</button>
+    </form>
+
+

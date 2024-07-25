@@ -1,0 +1,31 @@
+﻿@model CRUD_Operations.Models.ProjectsModel
+
+@{
+    ViewBag.Title = "Projects";
+}
+
+<h2>Projects</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ProjectName, "Project Name")
+        @Html.TextBoxFor(model => model.ProjectName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ProjectName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ClientId, "Client")
+        @Html.DropDownListFor(model => model.ClientId, Model.Clients, "Select a client", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ClientId)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+
+    <p>
+        @Html.ActionLink("Show all Project data", "Index")
+    </p>
+}
+
