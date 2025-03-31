@@ -1,4 +1,5 @@
 # InquireX
+![ChatGPT Image Mar 31, 2025, 09_35_46 PM](https://github.com/user-attachments/assets/1019f69a-b746-4656-b9b2-e05d8b824f1b)
 
 InquireX is a robust ASP.NET MVC application designed for efficient management of user queries with role-based access control. The application includes CRUD operations, role-based functionalities, and a streamlined query management system.
 
